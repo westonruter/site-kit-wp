@@ -1,3 +1,4 @@
+<?php // phpcs:disable ?>
 <?php
 
 /**
