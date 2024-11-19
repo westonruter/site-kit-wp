@@ -203,6 +203,7 @@ class GTag {
 		// Load the GTag scripts using the first tag ID - it doesn't matter which is used,
 		// all registered tags will be set up with a config command regardless
 		// of which is used to load the source.
-		return 'https://www.googletagmanager.com/gtag/js?id=' . rawurlencode( $this->tags[0]['tag_id'] );
+		// return 'https://www.googletagmanager.com/gtag/js?id=' . rawurlencode( $this->tags[0]['tag_id'] );
+		return plugins_url( 'fpm/measurement.php', GOOGLESITEKIT_PLUGIN_MAIN_FILE ) . '?id=' . rawurlencode( $this->tags[0]['tag_id'] ) . '&s=/gtag/js';
 	}
 }
